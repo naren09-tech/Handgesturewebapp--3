@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hand Gesture Web App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="btn btn-primary heading">
+                <h1>Hand Gesture Web App</h1>
+                <br>
+                <span>&#128076;</span>
+                <span>&#9996;</span>
+                <span>&#128077;</span>
+                <span>&#128078;</span>
+                <span>&#9995;</span>
+            </div>
+            <h3>Show a hand gesture and get a emoji</h3>
+            <h3>Show one of this gesture - </h3>
+            <div>
+                <span>&#128076;</span>
+                <span class="hrl"></span>
+                <span>&#9996;</span>
+                <span class="hrl"></span>
+                <span>&#128077;</span>
+                <span class="hrl"></span>
+                <span>&#9995;</span>
+                <span class="hrl"></span>
+            </div>
+            <br>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <label>Live Webcam view</label>
+            <div id="camera"></div>
+            <br>
+            <button onclick="take_snapshot();" class="btn btn-primary">Capture Image</button>
+        </div>
+            <div id="prdiction" class="col-md-4 col-sm-4 col-xs-12">
+                <h4 id="prediction_1" class="prediction">Prediction 1 -</h4>
+                <h3 id="result_emotion_name"></h3>
+                <br>
+                <br>
+                <h4 id="prediction_2" class="prediction">Prediction 2 -</h4>
+                <h3 id="result_emotion_name2"></h3>
+
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div id="result"></div>
+                <button onclick="classify();" class="btn btn-warning">Predict emoji</button>
+            </div>     
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+}
+.heading{
+    width:100%;
+    border-radius: 25px;
+}
+.hrl{
+    background-color: black;
+    height: 30px;
+    width: 5px;
+    color: black;
+}
+.prediction{
+    background-color:lightblue;
+    border-radius: 40px;
+    padding:5px 0 5px 0;
+    width: fit-content;
+}
+#camera, #result{
+    border: dashed black 2px;
+    height: 250px;
+    width:300px;
+}
